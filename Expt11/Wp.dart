@@ -6,8 +6,6 @@ class Wallpaper {
 
   final String imageUrl;
 
-
-
   Wallpaper({
 
     required this.id,
@@ -17,8 +15,6 @@ class Wallpaper {
     required this.imageUrl,
 
   });
-
-
 
   factory Wallpaper.fromJson(Map<String, dynamic> json) {
 
