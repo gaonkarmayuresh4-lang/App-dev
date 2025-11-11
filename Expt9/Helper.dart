@@ -2,8 +2,6 @@ import 'package:sqflite/sqflite.dart';
 
 import 'package:path/path.dart';
 
-
-
 class DatabaseHelper {
 
   static final DatabaseHelper _instance = DatabaseHelper._internal();
@@ -12,11 +10,7 @@ class DatabaseHelper {
 
   DatabaseHelper._internal();
 
-
-
   static Database? _db;
-
-
 
   Future<Database> get db async {
 
@@ -27,8 +21,6 @@ class DatabaseHelper {
     return _db!;
 
   }
-
-
 
   Future<Database> initDb() async {
 
@@ -82,8 +74,6 @@ class DatabaseHelper {
 
   }
 
-
-
   Future<List<Map<String, dynamic>>> getHistory() async {
 
     final dbClient = await db;
@@ -91,8 +81,6 @@ class DatabaseHelper {
     return await dbClient.query('history', orderBy: 'id DESC');
 
   }
-
-
 
   Future<void> clearHistory() async {
 
